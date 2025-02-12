@@ -1,22 +1,33 @@
 #include <stdio.h>
 
-void decimalToBinary(int num) {
-    // Start from the most significant bit (31st bit) for a 32-bit number
-    for (int i = 31; i >= 0; i--) {
-        // Check if the ith bit is set (1) or not (0)
-        int bit = (num >> i) & 1;
-        // Print the bit (either 0 or 1)
-        printf("%d", bit);
+void decimalToBinary(int n) {
+    if (n == 0) {
+        printf("0");
+        return;
     }
-    printf("\n");
+
+    int numBits = sizeof(n) * 8; 
+    int foundMSB = 0; 
+
+    for (int i = numBits - 1; i >= 0; i--) {
+        int bit = (n >> i) & 1;
+
+        if (bit == 1) {
+            foundMSB = 1;
+        }
+
+        if (foundMSB || i == 0) {
+            printf("%d", bit);
+        }
+    }
 }
 
 int main() {
-    int num;
-    scanf("%d", &num);
-    
-    // Call the function to print the binary representation
-    decimalToBinary(num);
-    
+    int n;
+    scanf("%d", &n);
+
+    decimalToBinary(n);
+    printf("\n");
+
     return 0;
 }
