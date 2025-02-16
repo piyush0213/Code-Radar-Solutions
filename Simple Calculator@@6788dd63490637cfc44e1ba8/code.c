@@ -5,7 +5,6 @@ int main() {
     char operator;
 
     // Read input from the user
-    printf("Enter an expression (e.g., 3 + 5): ");
     scanf("%d %c %d", &num1, &operator, &num2);
 
     // Perform the operation based on the operator
@@ -23,11 +22,11 @@ int main() {
             if (num2 != 0) {
                 printf("%d %c %d = %d\n", num1, operator, num2, num1 / num2);
             } else {
-                printf("Error: Division by zero is not allowed.\n");
+                printf("Error\n");
             }
             break;
         default:
-            printf("Error: Invalid operator.\n");
+            printf("Error\n");
             break;
     }
 
