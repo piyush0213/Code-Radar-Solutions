@@ -6,12 +6,15 @@ int main(){
 
     if (a == (int)a){
         print("Digit");
-    } else if(a == "!@#$%^&*?"){
-        printf("Special Character");
-    } else if(a == 'a' || a =='e'|| a =='i'|| a=='o'|| a=='u'){
+    } else if(a>='a' && a<='z'){
+        if(a == 'a' || a =='e'|| a =='i'|| a=='o'|| a=='u'){
         printf("Vowel");
+        } else{
+            printf("Consonant");
+        }
+
     } else{
-        printf("Consonant")
+        printf("Special Character");
     }
     return 0;
 }
