@@ -14,7 +14,7 @@ int main() {
     } else if(operator == '/'){
         printf("%d %c %d", num1/num2);
     } else{
-        printf("Error")
+        printf("Error");
     }
 
     return 0;
