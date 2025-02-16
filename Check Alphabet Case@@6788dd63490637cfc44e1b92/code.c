@@ -5,7 +5,7 @@ int main(){
     scanf("%c", &c);
 
     if (c == "ABCDEFGHIJKLMNOPQRSTUVWXYZ"){
-        print("Uppercase");
+        printf("Uppercase");
     }else{
         printf("Lowercase");
     }
