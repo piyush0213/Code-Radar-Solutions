@@ -6,13 +6,13 @@ int main() {
     scanf("%d %c %d", &num1, &operator, &num2);
 
     if (operator == '+'){
-        printf("%d", num1+num2);
+        printf("%d\n", num1+num2);
     } else if(operator == '-'){
-        printf("%d", num1-num2);
+        printf("%d\n", num1-num2);
     } else if(operator == '*'){
-        printf("%d", num1*num2);
+        printf("%d\n", num1*num2);
     } else if(operator == '/'){
-        printf("%d", num1/num2);
+        printf("%d\n", num1/num2);
     } else{
         printf("Error");
     }
