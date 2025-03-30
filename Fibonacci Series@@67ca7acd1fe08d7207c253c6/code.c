@@ -1,31 +1,25 @@
 #include <stdio.h>
 
-void fibonacci(int n) {
-    int a = 0, b = 1, next;
-    
-    if (n <= 0) {
-        printf("Invalid input\n");
-        return;
-    }
-
-    for (int i = 0; i < n; i++) {
-        printf("%d", a);
-        if (i < n - 1) printf(" "); // Space separation
-        next = a + b;
-        a = b;
-        b = next;
-    }
-    printf("\n");
+int fibonacci(int n) {
+    if (n == 1)
+        return 0;
+    else if (n == 2)
+        return 1;
+    else
+        return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
 int main() {
     int n;
-
-    // Read the number of terms
     scanf("%d", &n);
-
-    // Generate and print Fibonacci series
-    fibonacci(n);
-
+    
+    if (n <= 0) {
+        return 0;
+    }
+    
+    for (int i = 1; i <= n; i++) {
+        printf("%d ", fibonacci(i));
+    }
+    
     return 0;
 }
